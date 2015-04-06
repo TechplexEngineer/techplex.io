@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="144px" height="9px" viewBox="0 0 144 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch Beta 3.3 (11605) - http://www.bohemiancoding.com/sketch -->
+    <title>score</title>
+    <g id="score" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\
+            <circle id="1" fill="#4C4D4D" cx="4.5" cy="4.5" r="4.5"></circle>
+            <circle id="2" fill="#4C4D4D" cx="19.5" cy="4.5" r="4.5"></circle>
+            <circle id="3" fill="#4C4D4D" cx="34.5" cy="4.5" r="4.5"></circle>
+            <circle id="4" fill="#4C4D4D" cx="49.5" cy="4.5" r="4.5"></circle>
+            <circle id="5" fill="#4C4D4D" cx="64.5" cy="4.5" r="4.5"></circle>
+            <circle id="6" fill="#4C4D4D" cx="79.5" cy="4.5" r="4.5"></circle>
+            <circle id="7" fill="#B4B5B4" cx="94.5" cy="4.5" r="4.5"></circle>
+            <circle id="8" fill="#B4B5B4" cx="109.5" cy="4.5" r="4.5"></circle>
+            <circle id="9" fill="#B4B5B4" cx="124.5" cy="4.5" r="4.5"></circle>
+            <circle id="10" fill="#B4B5B4" cx="139.5" cy="4.5" r="4.5"></circle>\
+    </g>
+</svg>

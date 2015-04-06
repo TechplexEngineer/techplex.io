@@ -1,33 +1,109 @@
-<div class="container">
 
-  <div ng-include="'components/navbar/navbar.html'"></div>
-
-  <div class="jumbotron text-center">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">
-      <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-      Always a pleasure scaffolding your apps.
-    </p>
-    <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+<div ng-controller="MainCtrl as user" style="box-shadow: 0px 4px 12px 1px rgba(0,0,0,0.24); width: 1124px; margin: 30px auto 30px auto; padding:5px;">
+  <div class="header">
+    <h1 class="name" spellcheck="false">
+      <span class="first-name">{{user.name.first}}</span>
+      <span class="last-name">{{user.name.last}}</span>
+    </h1>
+    <h3 class="career">
+      {{user.career}}
+    </h3>
+    <ul class="contact">
+      <li class="link"><a href="http://{{user.link}}" target="_blank">{{user.link}}</a></li>
+      <li class="mail"><a href="mailto:{{user.mail}}">{{user.mail}}</a></li><!--
+      <li class="phone"><a href="tel:"></a></li> -->
+      <li class="github"><a href="https://github.com/{{user.github}}" target="_blank">{{user.github}}</a></li>
+    </ul>
   </div>
+  <div class="test">
+  <div class="main">
+    <div class="left-column">
+      <section ng-repeat="sec in user.lcol">
+        <h2><span>{{sec.title}}</span></h2>
+        <ul class="timeline">
+          <li class="entry" ng-repeat="item in sec.items">
+            <div class="time">
+              <span class="start-time">{{item.start}}</span>
+              – <span>{{item.end}}</span>
+            </div>
+            <h3>{{item.title}}</h3>
+            <h4>{{item.company}}</h4>
+            <ul ng-repeat="bullet in item.description">
+              <li>{{bullet}}</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
 
-  <div class="row">
-    <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'">
-      <div class="thumbnail">
-        <img class="pull-right" ng-src="assets/images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}">
-        <div class="caption">
-          <h3>{{awesomeThing.title}}</h3>
-          <p>{{awesomeThing.description}}</p>
-          <p><a ng-href="{{awesomeThing.url}}">{{awesomeThing.url}}</a></p>
-        </div>
-      </div>
+    </div>
+    <div class="right-column">
+      <section ng-show="user.rcol.summary">
+        <h2><span>Summary</span></h2>
+        <blockquote>
+          {{user.rcol.summary}}
+        </blockquote>
+      </section>
+      <section>
+        <h2><span>Coding Skills</span></h2>
+        <ul class="skills">
+          <li>
+            <span>HTML5/CSS3</span>
+            <img src="assets/images/score/score10.svg" alt="score">
+          </li>
+          <li>
+            <span>javascript</span>
+            <img src="assets/images/score/score8.svg" alt="score">
+          </li>
+          <li>
+            <span>Canvas</span>
+            <img src="assets/images/score/score9.svg" alt="score">
+          </li>
+          <li>
+            <span>NodeJS</span>
+            <img src="assets/images/score/score5.svg" alt="score">
+          </li>
+          <li>
+            <span>AngularJS</span>
+            <img src="assets/images/score/score7.svg" alt="score">
+          </li>
+          <li>
+            <span>PHP/MySQL</span>
+            <img src="assets/images/score/score8.svg" alt="score">
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2><span>Design Skills</span></h2>
+        <ul class="skills">
+          <li>
+            <span>SketchApp</span>
+            <img src="assets/images/score/score9.svg" alt="score">
+          </li>
+          <li>
+            <span>Photoshop</span>
+            <img src="assets/images/score/score9.svg" alt="score">
+          </li>
+          <li>
+            <span>Illustrator</span>
+            <img src="assets/images/score/score7.svg" alt="score">
+          </li>
+          <li>
+            <span>After Effects</span>
+            <img src="assets/images/score/score8.svg" alt="score">
+          </li>
+          <li>
+            <span>Form Prototype</span>
+            <img src="assets/images/score/score6.svg" alt="score">
+          </li>
+        </ul>
+      </section>
+      <section ng-repeat="list in user.rcol.lists">
+        <h2><span>{{list.title}}</span></h2>
+        <ul class="{{list.type}}">
+          <li class="award"b ng-repeat="item in list.items">{{item}}</li>
+        </ul>
+      </section>
     </div>
   </div>
-
-  <hr>
-
-  <div class="footer">
-    <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
-  </div>
-
+  <div class="clear"></div>
 </div>
