@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('resume')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, $window) {
+    // $window.title = "Blake Bourque's Resume";
+    document.title = "Blake Bourque's Resume";
     var ctrl = this;
     var data = {
       name: {
@@ -102,6 +104,17 @@ angular.module('resume')
           }
         ],
         lists: [
+          {
+            title:"Technical Skills",
+            type: "awards bullets",
+            items: [
+              "Proficient with Microsoft, Apple & Linux (Ubuntu/Debian, Fedora/CentOS) ",
+              "Fluent in Java, Python, PHP, C/C++, C#/ASP.NET MVC, Javascript/NodeJS, jQuery, Angular",
+              "Experience with MySQL, mongoDB, SQLServer",
+              "Developed with Visual Studio, Netbeans, vi/vim, Eclipse, InteliJ/Jetbrains, Sublime Text",
+              "Familiar with Allen Bradley ControlLogix and RSLogix"
+            ]
+          },
           {
             title:"Honors",
             type: "awards",

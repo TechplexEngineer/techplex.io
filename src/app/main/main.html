@@ -1,5 +1,5 @@
 
-<div ng-controller="MainCtrl as user" style="box-shadow: 0px 4px 12px 1px rgba(0,0,0,0.24); width: 1124px; margin: 30px auto 30px auto; padding:5px;">
+<div class="wrapper" ng-controller="MainCtrl as user">
   <div class="header">
     <h1 class="name" spellcheck="false">
       <span class="first-name">{{user.name.first}}</span>
@@ -43,7 +43,10 @@
           {{user.rcol.summary}}
         </blockquote>
       </section>
-      <section>
+      <!-- <section ng-repeat="list in user.rcol.lists">
+        <h2><span></span></h2>
+      </section> -->
+      <!-- <section>
         <h2><span>Coding Skills</span></h2>
         <ul class="skills">
           <li>
@@ -96,7 +99,7 @@
             <img src="assets/images/score/score6.svg" alt="score">
           </li>
         </ul>
-      </section>
+      </section> -->
       <section ng-repeat="list in user.rcol.lists">
         <h2><span>{{list.title}}</span></h2>
         <ul class="{{list.type}}">
