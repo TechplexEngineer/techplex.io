@@ -22,12 +22,8 @@
         <h2><span>{{sec.title}}</span></h2>
         <ul class="timeline">
           <li class="entry" ng-repeat="item in sec.items">
-            <div class="time">
-              <span class="start-time">{{item.start}}</span>
-              – <span>{{item.end}}</span>
-            </div>
             <h3>{{item.title}}</h3>
-            <h4>{{item.company}}</h4>
+            <h4>{{item.company}} <small>{{item.start}} - {{item.end}}</small></h4>
             <ul ng-repeat="bullet in item.description">
               <li>{{bullet}}</li>
             </ul>
