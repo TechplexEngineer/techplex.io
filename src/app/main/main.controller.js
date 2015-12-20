@@ -16,6 +16,21 @@ angular.module('resume')
       github: "TechplexEngineer",
       lcol: [
         {
+            title: "Education",
+            items: [
+              {
+                title:"Bachelor of Science Computer Engineering",
+                company:"University of Maine",
+                description: [
+                  "Expected May 2015",
+                  "GPA 3.717"
+                ],
+                start:"May 2014",
+                end:"Aug 2014",
+              },
+            ]
+        },
+        {
           title: "Professional Experience",
           items: [
             {
@@ -76,24 +91,7 @@ angular.module('resume')
               end:"2011",
             }
           ]
-        },{
-          title: "Education",
-          items: [
-            {
-              title:"Bachelor of Science Computer Engineering",
-              company:"University of Maine",
-              description: [
-                "Expected May 2015",
-                "GPA 3.717"
-              ],
-              start:"May 2014",
-              end:"Aug 2014",
-            },
-          ]
         }
-
-
-
       ],
       rcol: {
         summary: "",

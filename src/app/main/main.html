@@ -1,14 +1,21 @@
 
 <div class="wrapper" ng-controller="MainCtrl as user">
-  <div class="header">
-    <h1 class="name" spellcheck="false">
-      <span class="first-name">{{user.name.first}}</span>
-      <span class="last-name">{{user.name.last}}</span>
-    </h1>
-    <h3 class="career">
-      {{user.career}}
-    </h3>
-    <ul class="contact">
+  <div class="header" style="margin-top: 45px;">
+    <div class="row" style="margin-left: 2px;">
+      <div class="col-xs-2" style="padding-left: 0; width: 128px;">
+        <img style="width: 128px; border-radius: 8px;" src="http://www.techwizworld.net/uploads/7/4/2/1/7421565/8310060_orig.jpg"/>
+      </div>
+      <div class="col-xs-10">
+        <h1 class="name" spellcheck="false" style="font-size: 64px; text-align: left; margin-top: -10px;">
+          <span class="first-name">{{user.name.first}}</span>
+          <span class="last-name">{{user.name.last}}</span>
+        </h1>
+        <h3 class="career" style="font-size: 24px; text-align: left; margin-top: -10px;">
+          {{user.career}}
+        </h3>
+      </div>
+    </div>
+    <ul class="contact" style="margin-top: -10px;">
       <li class="link"><a href="http://{{user.link}}" target="_blank">{{user.link}}</a></li>
       <li class="mail"><a href="mailto:{{user.mail}}">{{user.mail}}</a></li><!--
       <li class="phone"><a href="tel:"></a></li> -->
@@ -23,9 +30,9 @@
         <ul class="timeline">
           <li class="entry" ng-repeat="item in sec.items">
             <h3>{{item.title}}</h3>
-            <h4>{{item.company}} <small>{{item.start}} - {{item.end}}</small></h4>
+            <h4 style="margin-bottom: 4px;">{{item.company}} <small style="font-size: 16px;">&nbsp;({{item.start}} - {{item.end}})</small></h4>
             <ul ng-repeat="bullet in item.description">
-              <li>{{bullet}}</li>
+              <li>&bull;&nbsp;{{bullet}}</li>
             </ul>
           </li>
         </ul>
