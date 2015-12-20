@@ -1,9 +1,10 @@
+<script type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css"></script>
 
 <div class="wrapper" ng-controller="MainCtrl as user">
-  <div class="header" style="margin-top: 45px;">
+  <div class="header" style="margin-top: 15px; height: 153px !important;">
     <div class="row" style="margin-left: 2px;">
-      <div class="col-xs-2" style="padding-left: 0; width: 128px;">
-        <img style="width: 128px; border-radius: 8px;" src="http://www.techwizworld.net/uploads/7/4/2/1/7421565/8310060_orig.jpg"/>
+      <div class="col-xs-2" style="padding-left: 0; width: 128px; height: 128px; margin-top: 8px;">
+        <img style="width: 113px !important; height: 113px !important; border-radius: 8px;" src="http://www.oesd.noaa.gov/scholarships/hollings_scholars/class_2013/kyle_nolan.jpg"/>
       </div>
       <div class="col-xs-10">
         <h1 class="name" spellcheck="false" style="font-size: 64px; text-align: left; margin-top: -10px;">
@@ -15,12 +16,15 @@
         </h3>
       </div>
     </div>
-    <ul class="contact" style="margin-top: -10px;">
-      <li class="link"><a href="http://{{user.link}}" target="_blank">{{user.link}}</a></li>
-      <li class="mail"><a href="mailto:{{user.mail}}">{{user.mail}}</a></li><!--
-      <li class="phone"><a href="tel:"></a></li> -->
-      <li class="github"><a href="https://github.com/{{user.github}}" target="_blank">{{user.github}}</a></li>
+    <ul class="contact" style="top: 5px;">
+      <li class="link"><a href="{{user.linkHref}}" target="_blank">{{user.link}}</a></li>
+      <li class="mail"><a href="{{user.mailHref}}" >{{user.mail}}</a></li>
+      <li class="phone"><a href="{{user.phoneHref}}">{{user.phone}}</a></li>
+      <li class="github"><a href="{{user.githubHref}}" target="_blank">{{user.github}}</a></li>
     </ul>
+  </div>
+  <div class="hor-line" style="margin-left: 45px; overflow: hidden; height: 10px; width: 1028px; border: 1px dotted;">
+    <!--<img src="../assets/images/score/pattern.png" ng-repeat="i in getNumber(numPngs)">-->
   </div>
   <div class="test">
   <div class="main">
@@ -40,12 +44,6 @@
 
     </div>
     <div class="right-column">
-      <section ng-show="user.rcol.summary">
-        <h2><span>Summary</span></h2>
-        <blockquote>
-          {{user.rcol.summary}}
-        </blockquote>
-      </section>
       <!-- <section ng-repeat="list in user.rcol.lists">
         <h2><span></span></h2>
       </section> -->

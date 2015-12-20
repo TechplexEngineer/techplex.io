@@ -2,31 +2,45 @@
 
 angular.module('resume')
   .controller('MainCtrl', function ($scope, $window) {
-    // $window.title = "Blake Bourque's Resume";
-    document.title = "Blake Bourque's Resume";
+    // $window.title = "Kyle Nolan's Resume";
+    document.title = "Kyle Nolan's Resume";
+
     var ctrl = this;
+    $scope.numPngs = 8;
+    $scope.getNumber = function(num) {
+      var ret = [];
+      for (var i=0; i<num; i++) {
+        ret.push({id: i});
+      }
+      return ret;
+    }
+
     var data = {
       name: {
-        first:"Blake",
-        last:"Bourque"
+        first:"Kyle",
+        last:"Nolan"
       },
       career: "Computer Engineer",
-      link: "techplex.io",
-      mail: "blake@techplex.io",
-      github: "TechplexEngineer",
+      link: "kylenolan.net",
+      linkHref: "http://www.kylenolan.net",
+      mailHref: "mailto:kyle.c.nolan@gmail.com",
+      githubHref: "http://www.github.com/kcnolan13",
+      phoneHref: "",
+      mail: "kyle.c.nolan@gmail.com",
+      github: "kcnolan13",
+      phone: '207.975.1248',
       lcol: [
         {
             title: "Education",
             items: [
               {
-                title:"Bachelor of Science Computer Engineering",
+                title:"Bachelor of Science, Computer Engineering",
                 company:"University of Maine",
                 description: [
-                  "Expected May 2015",
-                  "GPA 3.717"
+                  "Cumulative GPA 3.979"
                 ],
-                start:"May 2014",
-                end:"Aug 2014",
+                start:"Sep 2011",
+                end:"May 2015",
               },
             ]
         },
@@ -34,62 +48,68 @@ angular.module('resume')
           title: "Professional Experience",
           items: [
             {
-              title:"Summer Electrical Engineering Co-Op",
-              company:"Sappi Fine Paper North America",
+              title:"Software Developer",
+              company:"Tyler Technologies",
               description: [
-                "Managed the final electrical connection and closeout of three new fire protection systems.",
-                "Designed wiring diagrams using AutoCAD for Kajaani ash meter replacement, and managed project.",
-                "Developed a test procedure for the finishing wrapline HMI virtualization project."
+                "Built enterprise-level ERP web applications with AngularJS and C# .NET.",
+                "Improved existing legacy code: HTML5, SilverLight, C#, and TSQL.",
+                "Gained experience writing TSQL views, tables, and stored procedures."
+              ],
+              start:"June 2015",
+              end:"Present",
+            },{
+              title:"Software Engineering Intern",
+              company:"NOAA Hurricane Hunters",
+              description: [
+                "Designed and implemented an on-aircraft, georectified data display application.",
+                "Developed in C++, Perl, PHP, JavaScript, HTML, CSS, KML and PostgreSQL.",
+                "Application is used by NOAA flight directors to inform core mission decisions.",
+                "Presented to the National Hurricane Center in Miami, FL.",
+                "Presented at the 2015 Science and Education Symposium in Silver Springs, MD."
               ],
               start:"May 2014",
               end:"Aug 2014",
             },{
-              title:"Summer Information Technology Co-Op",
-              company:"Sappi Fine Paper North America",
+              title:"Independent Game Developer",
+              company:"kylenolan.net/#/games",
               description: [
-                "Developed a web database application to track critical network-connected devices in ASP.Net MVC.",
-                "Collaborated with process control and network engineers to refine user experience of the application."
+                "Coded in C++ and GML. Developed lighting and physics engines from scratch.",
+                "Wrote a clustered, dedicated server in NodeJS to facilitate multiplayer matches.",
+                "Used the C++ and JavaScript socket.io APIs for game state synchronization.",
+                "Carried two games through the full development and marketing cycle.",
+                "Composed original music, designed art/animation."
               ],
-              start:"May 2013",
+              start:"Jul 2013",
+              end:"Sep 2015",
+            },{
+              title:"IT Auditing Intern",
+              company:"Sheshunoff Consulting and Solutions",
+              description: [
+                "Presented and justified audit findings during executive meetings.",
+                "Built spreadsheet templates to streamline active directory testing.",
+                "Wrote VBScript programs to automate documentation processes."
+              ],
+              start:"Aug 2013",
               end:"Aug 2013",
             },{
-              title:"Summer Programming Intern",
-              company:"Kepware Technologies",
+              title:"Undergraduate Researcher",
+              company:"LASST, University of Maine",
               description: [
-                "Programmed a module in C++ which allows KepServerEX to access remote data via XML SOAP.",
-                "Developed documentation for internal and customer use."
-
+                "Studied thin film carbon for use in Nanopore Gene Sequencing.",
+                "Experience with Design of Experiments and RF Magnetron Sputtering."
               ],
-              start:"May 2012",
-              end:"Aug 2012",
-            },{
-              title:"Web Application Engineer",
-              company:"DeepCwind Consortium",
+              start:"Jun 2013",
+              end:"Aug 2013",
+            }/*,{
+              title:"Computer Technician",
+              company:"Computer Solutions, LLC",
               description: [
-                "Designed an online purchase order reimbursement system, with dynamic totaling and validation.",
-                "Implemented a remote data acquisition system to act as a scoring system for the Windstorm Challenge."
+                "Performed virus remediation, hardware replacements, and tune-ups/optimizaton.",
+                "Gained customer relations experience in a professional setting."
               ],
-              start:"Feb 2012",
-              end:"Apr 2012",
-            },{
-              title:"Founder/Web Application Engineer",
-              company:"Techplex Labs",
-              description: [
-                "Designed and built websites, for a variety of organizations on strict budgets.",
-                "Responsible for the development and maintenance of web database applications."
-              ],
-              start:"Jan 2009",
-              end:"Sep 2012",
-            },{
-              title:"Robotics Counselor",
-              company:"Maine Robotics",
-              description: [
-                "Encouraged youth to learn more about engineering and computer science with Lego Mindstorms system.",
-                "Provided a supportive environment for students to be excited about science and technology."
-              ],
-              start:"Jul & Aug 2008",
-              end:"2011",
-            }
+              start:"Jun 2008",
+              end:"Aug 2010",
+            }*/
           ]
         }
       ],
@@ -106,29 +126,35 @@ angular.module('resume')
             title:"Technical Skills",
             type: "awards bullets",
             items: [
-              "Proficient with Microsoft, Apple & Linux (Ubuntu/Debian, Fedora/CentOS) ",
-              "Fluent in Java, Python, PHP, C/C++, C#/ASP.NET MVC, Javascript/NodeJS, jQuery, Angular",
-              "Experience with MySQL, mongoDB, SQLServer",
-              "Developed with Visual Studio, Netbeans, vi/vim, Eclipse, InteliJ/Jetbrains, Sublime Text",
-              "Familiar with Allen Bradley ControlLogix and RSLogix"
+              "Proficient in JavaScript, NodeJS, C/C++, Python, JQuery, HTML, CSS, KML, Less, Grunt, Socket.io, AngularJS, OpenLayers",
+              "Comfortable with Microsoft, Apple & Linux operating systems (Ubuntu, Gnome, Kali).",
+              "Experience using MySQL, TSQL, PostgreSQL, SQLServer",
+              "Familiar with Apache, IIS, VMWare, Hyper-V, VirtualBox.",
+              "Developed with Visual Studio, Sublime Text, Chrome Dev Tools, SQLServer Management Studio."
             ]
           },
           {
-            title:"Honors",
+            title:"General Skills",
+            type: "awards bullets",
+            items: [
+              "Articulate, professional public speaker",
+              "SAT Scores: 720 Reading, 750 Writing, 700 Math",
+              "SAT II Scores: 730 Math, 740 Lit.",
+              "Spanish: Upper Intermediate Proficiency"
+            ]
+          },
+          {
+            title:"Honors and Awards",
             type: "awards",
             items: [
-              "Eagle Scout, Troop 453",
-              "Vice President Eta Kappa Nu Honor Society"
+              "Outstanding Presentation Award, NOAA Science and Education Symposium, Silver Spring, MD (2014)",
+              "NOAA Hollings Scholar (2013-2015)",
+              "Vice President of the Tau Beta Pi Engineering Honor Society (2013-2014)",
+              "24-Hour Programming IEEEXtreme Contest Competitor (2013).",
+              "University of Maine Outstanding Student Merit Award Recipient (2012)"
+              /*"Systems Engineering and Robotics Project Award Winner, West Point Summer Leaders Seminar (May 2010)"*/
             ]
-          },{
-            title:"Scholarships / Involvement",
-            type: "awards scholarship",
-            items: [
-              "University of Maine Pulp & Paper Foundation Scholarship 2011-2015",
-              "Mentor FIRST Robotics Team 5122, The RoboTies",
-              "IEEE Member"
-            ]
-          }
+          },
         ]
       }
 
