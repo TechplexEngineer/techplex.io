@@ -34,7 +34,7 @@
         <ul class="timeline">
           <li class="entry" ng-repeat="item in sec.items">
             <h3>{{item.title}}</h3>
-            <h4 style="margin-bottom: 4px;">{{item.company}} <small style="font-size: 16px;">&nbsp;({{item.start}} - {{item.end}})</small></h4>
+            <h4 style="margin-bottom: 4px;">{{item.company}} <small style="font-size: 16px; color: #777777">&nbsp;({{item.start}} - {{item.end}})</small></h4>
             <ul ng-repeat="bullet in item.description">
               <li>&bull;&nbsp;{{bullet}}</li>
             </ul>

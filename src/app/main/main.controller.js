@@ -96,7 +96,8 @@ angular.module('resume')
               company:"LASST, University of Maine",
               description: [
                 "Studied thin film carbon for use in Nanopore Gene Sequencing.",
-                "Experience with Design of Experiments and RF Magnetron Sputtering."
+                "Experience with Design of Experiments and RF Magnetron Sputtering.",
+                "Performed nanoscale thin film deposition in a clean room environment."
               ],
               start:"Jun 2013",
               end:"Aug 2013",
@@ -127,7 +128,7 @@ angular.module('resume')
             type: "awards bullets",
             items: [
               "Proficient in JavaScript, NodeJS, C/C++, Python, JQuery, HTML, CSS, KML, Less, Grunt, Socket.io, AngularJS, OpenLayers",
-              "Comfortable with Microsoft, Apple & Linux operating systems (Ubuntu, Gnome, Kali).",
+              "Comfortable with Microsoft, Apple, and Linux operating systems (Ubuntu, Gnome, Kali).",
               "Experience using MySQL, TSQL, PostgreSQL, SQLServer",
               "Familiar with Apache, IIS, VMWare, Hyper-V, VirtualBox.",
               "Developed with Visual Studio, Sublime Text, Chrome Dev Tools, SQLServer Management Studio."
